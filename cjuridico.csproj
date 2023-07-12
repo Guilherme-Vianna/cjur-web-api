@@ -1,0 +1,54 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="MediatR" Version="12.0.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.16" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.16" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.5">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="7.0.5" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.5" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.5">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="sib_api_v3_sdk" Version="4.0.2" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+        <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.1" />
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.29.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Remove="Domain\CQ\Querys\Responses\Usuario\**" />
+        <Compile Remove="Domain\CQ\Commands\Handlers\Pedido\**" />
+        <Compile Remove="Domain\CQ\Commands\Handlers\Cliente\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Remove="Domain\CQ\Querys\Responses\Usuario\**" />
+        <EmbeddedResource Remove="Domain\CQ\Commands\Handlers\Pedido\**" />
+        <EmbeddedResource Remove="Domain\CQ\Commands\Handlers\Cliente\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Remove="Domain\CQ\Querys\Responses\Usuario\**" />
+        <Content Remove="Domain\CQ\Commands\Handlers\Pedido\**" />
+        <Content Remove="Domain\CQ\Commands\Handlers\Cliente\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="Domain\CQ\Querys\Responses\Usuario\**" />
+        <None Remove="Domain\CQ\Commands\Handlers\Pedido\**" />
+        <None Remove="Domain\CQ\Commands\Handlers\Cliente\**" />
+    </ItemGroup>
+
+</Project>

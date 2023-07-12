@@ -1,0 +1,17 @@
+namespace cjuridico.Domain.Models.Enuns;
+
+public enum ETipoDeTrabalho
+{
+    AUDIENCIA,
+    COPIADEPROCESSO,
+    PROTOCOLO,
+    DESPACHO,
+    DILIGENCIAEMCARTORIO,
+    DILIGENCIAEXTRAJUDICIAL,
+    HOMOLOGACAO,
+    NOTIFICACAO,
+    ALVARA,
+    EMISSAODEGUIA,
+    DISTRIBUICAO,
+    EMISSAODECERTIDAO
+}
